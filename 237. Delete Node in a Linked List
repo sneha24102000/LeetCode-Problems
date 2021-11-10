@@ -1,0 +1,14 @@
+class Solution {
+public:
+    void deleteNode(ListNode* node) {
+        
+        
+        swap(node->val,node->next->val);
+        if(node->next==NULL)
+            delete node;
+        ListNode*temp2=node->next;
+        node->next=node->next->next;
+        delete temp2;
+        
+    }
+};
