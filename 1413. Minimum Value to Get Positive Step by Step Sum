@@ -1,0 +1,14 @@
+class Solution {
+public:
+    int minStartValue(vector<int>& nums) {
+        
+        int minSum=0;
+        int currSum=0;
+        for(auto i:nums)
+        {
+            currSum+=i;
+            minSum=min(minSum,currSum);
+        }
+        return -minSum+1;
+    }
+};
